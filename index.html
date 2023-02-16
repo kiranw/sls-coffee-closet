@@ -23,7 +23,7 @@
 	}
 
 	var data;
-	fetch('https://sheet2api.com/v1/jV0Ohpc6Qh6v/coffee-machine-status-responses', {
+	fetch('https://sheet2api.com/v1/avkuOAUEQrij/coffee-machine-status-responses', {
 	    method: 'GET',
 	    headers: {
 	        'Accept': 'application/json',
@@ -32,13 +32,15 @@
 </script>
 
 <hr>
-  <form id="form" target="_self" onsubmit="" action="javascript: postToGoogle()">
-      <legend><strong>Is it working <em>now</em>?</strong></legend>
+<div id="form">
+  <form target="_self" onsubmit="" action="javascript: postToGoogle()">
+      <legend id="question"><strong>Is it working <em>now</em>?</strong></legend>
       <input type="radio" value="☕️ Yes" name="qs1" />Yes
       <input type="radio" value="😥 No" name="qs1" />No
       <br><br>
-    <button type="submit">Submit</button>
+    <button class="button-30" type="submit">Update</button>
   </form>
+</div>
   <br><br>
 <div id="footer">made with ♡ by kiran</div>
   <script>
@@ -57,14 +59,23 @@
 	     statusCode: {
 	       0: function() {
 	         //Success message
+	         hideForm(field1, Date.now());
 	         // alert("Success!" + field1 + field2);
 	       },
 	       200: function() {
 	         //Success Message
 	         // alert("Success!");
+	         hideForm(field1, Date.now());
 	       }
 	     }
    });
+
+   function hideForm(status, time){
+   		$("#form").html("Submitted! Thanks for keeping this updated.");
+   		$("#answer").html(status);
+		$("#timestamp").html(time);
+   }
+
  }
 </script>
 </body>
