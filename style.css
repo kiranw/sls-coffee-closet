@@ -2,7 +2,8 @@ body {
 	background-color: #f0eee9;
 	font-family: "Inter", sans-serif;
 	text-align: center;
-	margin-top:20vh;
+	margin-top:13vh;
+	font-size:1.5em;
 }
 
 #sourcing {
@@ -21,5 +22,12 @@ body {
 
 hr {
 	width:50vw;
-	margin: 10vh 25vw;
+	margin: 8vh 25vw;
+}
+
+#footer {
+	/*position: absolute;*/
+	bottom: 10px;
+	font-size: 0.6em;
+	text-align: center;
 }
