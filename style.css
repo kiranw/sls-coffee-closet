@@ -2,8 +2,8 @@ body {
 	background-color: #f0eee9;
 	font-family: "Inter", sans-serif;
 	text-align: center;
-	margin-top:13vh;
-	font-size:calc(10px + 1.3vw);
+	margin:10vh 5vw;
+	font-size: 3em;
 }
 
 #sourcing {
@@ -16,18 +16,39 @@ body {
 	cursor: pointer;
 }
 
-#answer {
-	font-size: 4em;
+h1 {
+	font-size: 5em;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.3em;
+}
+
+h2 {
+	font-size: 1.25em;
 }
 
 hr {
 	width:50vw;
-	margin: 8vh 25vw;
+	margin: 4vh 25vw;
+}
+
+input[type="radio"] {
+	width: 3em;
+	height: 3em;
+	margin-right: 10px;
+}
+
+button {
+  font-size: 1em;
+  background-color: none;
+  padding: 1vh 2vw;
+  border-radius: 2px;
+
 }
 
 #footer {
-	/*position: absolute;*/
+	margin-left:-5vw;
+	width: 100%;
 	bottom: 10px;
-	font-size: 0.6em;
-	text-align: center;
+	opacity: 0.5;
+	position: fixed;
 }
