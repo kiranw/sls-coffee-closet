@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>SLS Coffee Closet • Is the SLS coffee machine working?</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
 	<link rel="stylesheet" href="style.css">
@@ -10,7 +11,7 @@
 
 <h2>Is the coffee machine working?</h2>
 <h1 id="answer">Yes</h1>
-<div id="sourcing">Last updated at <div id="timestamp" class="imported-data">time</div></div>
+<div id="sourcing">Last updated at <span id="timestamp" class="imported-data">time</span></div>
 
 <script>
 	function processData(data){
@@ -56,11 +57,11 @@
 	     statusCode: {
 	       0: function() {
 	         //Success message
-	         alert("Success!" + field1 + field2);
+	         // alert("Success!" + field1 + field2);
 	       },
 	       200: function() {
 	         //Success Message
-	         alert("Success!");
+	         // alert("Success!");
 	       }
 	     }
    });

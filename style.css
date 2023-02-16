@@ -3,11 +3,10 @@ body {
 	font-family: "Inter", sans-serif;
 	text-align: center;
 	margin:10vh 5vw;
-	font-size: 3em;
 }
 
 #sourcing {
-	display: inline-flex;
+	display: inline-block;
 }
 
 .imported-data {
@@ -32,8 +31,6 @@ hr {
 }
 
 input[type="radio"] {
-	width: 3em;
-	height: 3em;
 	margin-right: 10px;
 }
 
@@ -46,9 +43,33 @@ button {
 }
 
 #footer {
-	margin-left:-5vw;
-	width: 100%;
-	bottom: 10px;
 	opacity: 0.5;
-	position: fixed;
+	bottom: 10px;
+	font-size:0.8em;
+}
+
+
+@media screen and (min-width: 401px) {
+  body {
+    font-size: 2vw;
+  }
+
+  input[type="radio"] {
+  	width: 1em;
+	height: 1em;
+  }
+}
+
+
+
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 5vh;
+    color: red;
+  }
+
+  input[type="radio"] {
+  	width: 1em;
+	height: 1em;
+  }
 }
