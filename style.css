@@ -65,7 +65,6 @@ button {
 @media screen and (max-width: 400px) {
   body {
     font-size: 5vh;
-    color: red;
   }
 
   input[type="radio"] {
