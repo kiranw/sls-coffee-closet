@@ -59,13 +59,13 @@
 	     statusCode: {
 	       0: function() {
 	         //Success message
-	         hideForm(field1, Date.now());
+	         hideForm(field1, new Date().toLocaleString());
 	         // alert("Success!" + field1 + field2);
 	       },
 	       200: function() {
 	         //Success Message
 	         // alert("Success!");
-	         hideForm(field1, Date.now());
+	         hideForm(field1, new Date().toLocaleString());
 	       }
 	     }
    });
