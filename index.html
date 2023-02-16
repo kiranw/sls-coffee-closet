@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SLS Coffee Closet • Is the SLS coffee machine working?</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>SLS Coffee Closet • Is the SLS coffee machine working?</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
 <h1 id="answer">Yes</h1>
 
-
-<!-- https://docs.google.com/spreadsheets/d/1zPBeve7jMXtu8fgyxl_1nvNcWU1VF98N7VbtmVhqU-c/edit?resourcekey#gid=2109186904
-https://docs.google.com/spreadsheets/d/1zPBeve7jMXtu8fgyxl_1nvNcWU1VF98N7VbtmVhqU-c/gviz/tq?tqx=out:json
-https://spreadsheets.google.com/feeds/cells/1zPBeve7jMXtu8fgyxl_1nvNcWU1VF98N7VbtmVhqU-c/public/full?alt=json
-
- -->
 <script>
 	fetch('https://docs.google.com/spreadsheets/d/1zPBeve7jMXtu8fgyxl_1nvNcWU1VF98N7VbtmVhqU-c/gviz/tq?tqx=out:json', {
     method: 'GET',
     headers: {
         'Accept': 'application/json',
     },
-})
-.then(response => response.json())
-.then(response => console.log(JSON.stringify(response)))
+	}).then(console.log(response).then(response => response.json())
+	.then(response => console.log(JSON.stringify(response)))
 </script>
 
-
+<br><br><br><br><br><br>
 ☕️ Contribute to the data!
   <!-- <legend><strong>Google Forms</strong></legend> -->
   <form id="form" target="_self" onsubmit="" action="javascript: postToGoogle()">
