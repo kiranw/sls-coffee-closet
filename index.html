@@ -34,38 +34,46 @@
 <hr>
 <div id="form">
   <form target="_self" onsubmit="" action="javascript: postToGoogle()">
-      <legend id="question"><strong>Is it working <em>now</em>?</strong></legend>
-      <input type="radio" value="☕️ Yes" name="qs1" />Yes
-      <input type="radio" value="😥 No" name="qs1" />No
-      <br><br>
-    <button class="button-30" type="submit">Update</button>
+	<legend id="question"><strong>Is it working <em>now</em>?</strong></legend>
+		<label>
+			<input type="radio" value="Yes" name="qs1" id="yes-btn" />
+			<span>☕️ Yes</span>
+		</label>
+		<label>
+			<input type="radio" value="No" name="qs1" id="no-btn" />
+			<span>😥 No</span>
+		</label>
+    <button class="button-30" type="submit" disabled>Update</button>
   </form>
 </div>
   <br><br>
 <div id="footer">made with ♡ by kiran</div>
   <script>
+  	$('input').click(function() {
+	    if ($('#yes-btn').is(':checked')|$('#no-btn').is(':checked')) { $('button').removeAttr("disabled"); }
+	});
+
+
 	function postToGoogle() {
- 		var field1 = $("input[type='radio'][name='qs1']:checked").val();
- 		var field2 = "n/a";
+ 		var status = $("input[type='radio'][name='qs1']:checked").val();
+ 		var author = "n/a";
 
 	   $.ajax({
 	     url: "https://docs.google.com/forms/d/e/1FAIpQLSeg4esThvlNpXUo2ClpYMsQlenJ15IaB7XFkpb_dYc3Da44UQ/formResponse",
 	     data: {
-	    "entry.460804136": field1,
-	    "entry.1854639373": field2
+	    "entry.460804136": status,
+	    "entry.1854639373": author
 	     },
 	     type: "POST",
 	     dataType: "xml",
 	     statusCode: {
 	       0: function() {
 	         //Success message
-	         hideForm(field1, new Date().toLocaleString());
-	         // alert("Success!" + field1 + field2);
+	         hideForm(status, new Date().toLocaleString());
 	       },
 	       200: function() {
 	         //Success Message
-	         // alert("Success!");
-	         hideForm(field1, new Date().toLocaleString());
+	         hideForm(status, new Date().toLocaleString());
 	       }
 	     }
    });
