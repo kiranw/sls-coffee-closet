@@ -68,7 +68,7 @@ button {
   font-size: 1em;
   font-weight: 400;
   line-height: 1.25rem;
-  padding: .5rem 1rem;
+  padding: 1.5vw 3vw;
   text-align: center;
   text-decoration: none #D1D5DB solid;
   text-decoration-thickness: auto;
@@ -109,13 +109,13 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 5em;
+  width: 10vw;
   z-index: -1;
   background: rgba(1,1,1,0.04);
   color: black;
   border-radius: 0.5rem;
-  margin: -1em -1em;
-  padding: 1.5em;
+  margin: -1vw -1vw;
+  padding: 2vw;
 }
 
 label {
