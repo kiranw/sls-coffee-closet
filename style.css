@@ -42,23 +42,80 @@ hr {
   body {
     font-size: 1.8vw;
   }
+
+  label {
+    width: 5em;
+    margin-right: 15px;
+  }
+
+  input {
+    width: 10vw;
+    padding: 2vw;
+    margin: -1vw -1vw;
+  }
+
+  #form {
+    padding: 1em;
+  }
+
+  button {
+    margin-left: 1rem;
+    line-height: 1.25rem;
+    padding: 1.5vw 3vw;
+  }
 }
 
 @media screen and (max-width: 400px) {
   body {
-    font-size: 5vh;
+    font-size: 3vh;
+  }
+
+  label {
+    width: 125px;
+    height: 55px;
+    margin: 10px 0px;
+  }
+
+  input {
+    width: 115px;
+    height: 50px;
+    margin: -10px -15px;
+  }
+
+  legend {
+    width: 100%;
+    text-align: center;
+    padding-left: 15px;
+    margin-bottom: 10px;
+  }
+
+  label > span {
+    /*margin-left: 10px;
+    margin-top: 8px;*/
+    width: 115px;
+    height: 50px;
+  }
+
+  #form {
+    padding: 0.5em;
+  }
+
+  button {
+    margin-bottom: 15px;
+    line-height: 1.25rem;
+    padding: 15px 30px;
   }
 }
 
 #form {
   display: inline-flex;
-  padding: 1em;
+  /*padding: 1em;*/
   border: 1px solid #d9d9d9;
   border-radius: 1rem;
 }
 
 button {
-  margin-left: 1rem;
+  /*margin-left: 1rem;*/
   background-color: #FFFFFF;
   border: 1px solid rgb(209,213,219);
   border-radius: .5rem;
@@ -67,8 +124,8 @@ button {
   font-family: "Inter",system-ui;
   font-size: 1em;
   font-weight: 400;
-  line-height: 1.25rem;
-  padding: 1.5vw 3vw;
+  /*line-height: 1.25rem;*/
+  /*padding: 1.5vw 3vw;*/
   text-align: center;
   text-decoration: none #D1D5DB solid;
   text-decoration-thickness: auto;
@@ -109,20 +166,20 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 10vw;
+  /*width: 10vw;*/
   z-index: -1;
   background: rgba(1,1,1,0.04);
   color: black;
   border-radius: 0.5rem;
-  margin: -1vw -1vw;
-  padding: 2vw;
+  /*margin: -1vw -1vw;*/
+  /*padding: 2vw;*/
 }
 
 label {
   display: inline-block;
-  width: 5em;
+  /*width: 5em;*/
   color: black;
-  margin-right:1em;
+  /*margin-right:1em;*/
 }
 
 input[type="radio"]:checked {

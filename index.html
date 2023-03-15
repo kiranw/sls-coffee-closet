@@ -6,6 +6,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
 	<link rel="stylesheet" href="style.css">
+	<link id="favicon" rel="shortcut icon" type="image/png" href="default-favicon.svg" />
 </head>
 <body>
 
@@ -17,12 +18,11 @@
 	function processData(data){
 		lastRow = data[data.length-1];
 		$("#answer").html(lastRow["Is the machine working?"]);
+		var favicon = (lastRow["Is the machine working?"] == "No") ? "no-favicon.svg": "yes-favicon.svg";
+		$("#favicon").attr("href",favicon);
 		$("#timestamp").html(lastRow["Timestamp"]);
-		// $("#author").html(lastRow["Do you want credit for updating this? Add your name!"]);
-		console.log(answer, timestamp);
 	}
 
-	var data;
 	fetch('https://sheet2api.com/v1/AAsbIU8STv6N/coffee-machine-status-responses', {
 	    method: 'GET',
 	    headers: {
